@@ -8,7 +8,7 @@ export default function Home() {
       <div className="flex flex-col-reverse justify-end md:flex-row pt-20 h-screen w-screen gap-4">
         <HomeSummary />
         <Image 
-        className="h-1/2 w-full md:h-full md:w-2/5"
+        className="h-3/5 w-full md:h-full md:w-2/5"
           src="/images/erick_pic.png"
           alt="person"
           width={1365}
