@@ -79,7 +79,7 @@ export default function HomeSummary() {
                 </div>
 
                 <div className="bg-black shadow rounded-md p-2 shadow-blue-500 flex items-center justify-center w-48">
-                    <a href="/docs/EricksonResume.pdf">
+                    <a href="/docs/EricksonResume.pdf" target="_blank">
                         <p>Resume</p>
                     </a>
                 </div>
