@@ -15,18 +15,18 @@ export default function HomeSummary() {
             </h1>
             <div className="flex">
                 <div className="flex gap-4 justify-center items-center">
-                    <span className="text-4xl md:text-8xl">I&apos;m </span>
+                    <span className="text-3xl md:text-8xl">I&apos;m </span>
                     <div className="p-1 relative rounded-lg animate-bounce ease-in-out bg-gradient-to-r from-green-500 via-blue-500 to-purple-500">
                         <div className="bg-black flex gap-4 rounded-lg p-2">
                             <span className="text-blue-500 flex gap-4">
-                                <span className="text-2xl md:text-4xl">E</span>
-                                <span className="text-2xl md:text-4xl">r</span>
-                                <span className="text-2xl md:text-4xl">i</span>
-                                <span className="text-2xl md:text-4xl">c</span>
-                                <span className="text-2xl md:text-4xl">k</span>
-                                <span className="text-2xl md:text-4xl">s</span>
-                                <span className="text-2xl md:text-4xl">o</span>
-                                <span className="text-2xl md:text-4xl">n</span>
+                                <span className="text-xl md:text-4xl">E</span>
+                                <span className="text-xl md:text-4xl">r</span>
+                                <span className="text-xl md:text-4xl">i</span>
+                                <span className="text-xl md:text-4xl">c</span>
+                                <span className="text-xl md:text-4xl">k</span>
+                                <span className="text-xl md:text-4xl">s</span>
+                                <span className="text-xl md:text-4xl">o</span>
+                                <span className="text-xl md:text-4xl">n</span>
                             </span>
                             <span className="text-blue-500 flex gap-4 text-2xl md:text-4xl">
                                 Mbuvi
