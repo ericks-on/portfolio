@@ -12,7 +12,7 @@ export default function Contact() {
                     <Link href="mailto:mutisyaerickson@gmail.com">
                         <FaEnvelope className="text-4xl" />
                     </Link>
-                    <Link href="https://www.linkedin.com/in/erick-mutisya/" target="blank">
+                    <Link href="https://www.linkedin.com/in/erickson-mbuvi-data-scientist/" target="blank">
                         <FaLinkedinIn className="text-4xl text-blue-500" />
                     </Link>
                     <Link href="https://www.github.com/ericks-on" target="blank">

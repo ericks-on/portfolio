@@ -3,10 +3,10 @@ import { FaGithub, FaInstagram, FaKaggle, FaLinkedinIn } from "react-icons/fa";
 
 export default function HomeSummary() {
     const socials = {
-        github: "/",
-        linkedin: "/",
-        kaggle: "/",
-        instagram: "/",
+        github: "https://www.github.com/ericks-on",
+        linkedin: "https://www.linkedin.com/in/erickson-mbuvi-data-scientist/",
+        kaggle: "https://www.kaggle.com/ericksonmbuvi",
+        instagram: "https://www.instagram.com/erickson_mbuvi",
     }
     return (
         <div className="flex flex-col px-6 gap-6 md:w-3/5 ">
@@ -17,7 +17,7 @@ export default function HomeSummary() {
                 <div className="flex gap-4 justify-center items-center">
                     <span className="text-3xl md:text-8xl">I&apos;m </span>
                     <div className="p-1 relative rounded-lg animate-bounce ease-in-out bg-gradient-to-r from-green-500 via-blue-500 to-purple-500">
-                        <div className="bg-black flex gap-4 rounded-lg p-2">
+                        <div className="bg-background flex gap-4 rounded-lg p-2">
                             <span className="text-blue-500 flex gap-4">
                                 <span className="text-xl md:text-4xl">E</span>
                                 <span className="text-xl md:text-4xl">r</span>
@@ -72,13 +72,13 @@ export default function HomeSummary() {
                 </Link>
             </div>
             <div className="flex gap-4">
-                <div className="bg-black shadow rounded-md p-2 shadow-blue-500 flex items-center justify-center w-48">
+                <div className="shadow rounded-md p-2 shadow-blue-500 flex items-center justify-center w-48">
                     <Link href="/contact">
                         <p>Contact me</p>
                     </Link>
                 </div>
 
-                <div className="bg-black shadow rounded-md p-2 shadow-blue-500 flex items-center justify-center w-48">
+                <div className="shadow rounded-md p-2 shadow-blue-500 flex items-center justify-center w-48">
                     <a href="/docs/EricksonResume.pdf" target="_blank">
                         <p>Resume</p>
                     </a>
