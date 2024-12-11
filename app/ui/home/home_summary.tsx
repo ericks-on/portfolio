@@ -50,8 +50,7 @@ export default function HomeSummary() {
                 <p className="text-2xl">
                 Data Scientist with expertise in machine learning and
                 predictive analytics. 
-                Skilled in developing and deploying data-driven solutions and
-                improving business decision-making. Adept at leveraging advanced
+                Adept at leveraging advanced
                 statistical techniques to solve
                 complex business challenges.
                 </p>
