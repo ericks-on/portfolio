@@ -5,12 +5,18 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --primary: #065f46; /* Deep emerald green for buttons/links */
+  --secondary: #475569; /* Muted blue-gray for soft contrast */
+  --accent: #d97706; /* Warm amber for highlights */
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --primary: #10b981; /* Vibrant emerald in dark mode */
+    --secondary: #64748b; /* Softer blue-gray for contrast */
+    --accent: #f59e0b; /* Brighter amber for highlights */
   }
 }
 
@@ -18,4 +24,37 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Buttons and Links */
+a {
+  color: var(--primary);
+  transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+  color: var(--accent);
+}
+
+/* Secondary elements (subtle text, dividers) */
+.text-secondary {
+  color: var(--secondary);
+}
+
+/* Borders and interactive elements */
+.border-primary {
+  border-color: var(--primary);
+}
+
+.border-secondary {
+  border-color: var(--secondary);
+}
+
+/* Accent highlights (for underlines, buttons, highlights) */
+.bg-accent {
+  background-color: var(--accent);
+}
+
+.text-accent {
+  color: var(--accent);
 }

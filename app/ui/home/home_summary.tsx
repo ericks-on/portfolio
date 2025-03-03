@@ -1,90 +1,138 @@
+'use client';
 import Link from "next/link";
 import { FaGithub, FaInstagram, FaKaggle, FaLinkedinIn } from "react-icons/fa";
+import { useState, useEffect } from "react";
 
 export default function HomeSummary() {
+    const [isVisible, setIsVisible] = useState(false);
+    
+    useEffect(() => {
+        setIsVisible(true);
+    }, []);
+    
     const socials = {
         github: "https://www.github.com/ericks-on",
         linkedin: "https://www.linkedin.com/in/erickson-mbuvi-data-scientist/",
         kaggle: "https://www.kaggle.com/ericksonmbuvi",
         instagram: "https://www.instagram.com/erickson_mbuvi",
-    }
+    };
+    
     return (
-        <div className="flex flex-col px-6 gap-6 md:w-3/5 ">
-            <h1 className="text-6xl md:text-8xl text-yellow-500">
-                <strong>Hey there!</strong>
+        <div className="flex flex-col px-6 gap-8 md:w-3/5 justify-center">
+            {/* Animated entrance for the greeting */}
+            <h1 
+                className={`text-6xl md:text-8xl text-amber-600 font-bold transition-all duration-1000 transform ${
+                    isVisible ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0"
+                }`}
+            >
+                Hey there!
             </h1>
-            <div className="flex">
-                <div className="flex gap-4 justify-center items-center">
-                    <span className="text-3xl md:text-8xl">I&apos;m </span>
-                    <div className="p-1 relative rounded-lg animate-bounce ease-in-out bg-gradient-to-r from-green-500 via-blue-500 to-purple-500">
-                        <div className="bg-background flex gap-4 rounded-lg p-2">
-                            <span className="text-blue-500 flex gap-4">
-                                <span className="text-xl md:text-4xl">E</span>
-                                <span className="text-xl md:text-4xl">r</span>
-                                <span className="text-xl md:text-4xl">i</span>
-                                <span className="text-xl md:text-4xl">c</span>
-                                <span className="text-xl md:text-4xl">k</span>
-                                <span className="text-xl md:text-4xl">s</span>
-                                <span className="text-xl md:text-4xl">o</span>
-                                <span className="text-xl md:text-4xl">n</span>
-                            </span>
-                            <span className="text-blue-500 flex gap-4 text-2xl md:text-4xl">
-                                Mbuvi
-                            </span>
+            
+            {/* Name with improved animation - more masculine style */}
+            <div 
+                className={`transition-all duration-1000 delay-300 transform ${
+                    isVisible ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0"
+                }`}
+            >
+                <div className="flex items-center">
+                    <span className="text-3xl md:text-6xl mr-4">I&apos;m</span>
+                    <div className="relative">
+                        <div className="absolute inset-0 bg-gradient-to-r from-amber-700 to-gray-800 rounded-md blur-sm animate-pulse"></div>
+                        <div className="relative rounded-md p-3 border border-gray-700" style={{ background: "var(--background)" }}>
+                            <div className="flex items-baseline">
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-amber-400 font-bold text-3xl md:text-6xl mr-2">
+                                    Erickson
+                                </span>
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-500 to-gray-400 font-bold text-2xl md:text-5xl">
+                                    Mbuvi
+                                </span>
+                            </div>
                         </div>
-                        
                     </div>
                 </div>
             </div>
-            <div className="flex gap-4 flex-col md:flex-row">
-                <p className="text-4xl border-green-500 border rounded p-2">
-                    <strong>Data Scientist</strong>
-                </p>
-
-
-                <p className="text-4xl text-yellow-500 border-green-500 border rounded p-2">
-                    <strong>Web Developer</strong>
-                </p>
-            </div>
-            <div>
-                <p className="text-2xl">
-                Data Scientist with expertise in machine learning and
-                predictive analytics. 
-                Adept at leveraging advanced
-                statistical techniques to solve
-                complex business challenges.
-                </p>
-            </div>
-            {/* socials icons with link */}
-            <div className="flex gap-4">
-                <Link href={socials.github} className="h-16 w-16">
-                    <FaGithub   className="h-16 w-16"/>
-                </Link>
-                <Link href={socials.kaggle} className="h-16 w-16">
-                    <FaKaggle   className="h-16 w-16"/>
-                </Link>
-                <Link href={socials.linkedin} className="h-16 w-16">
-                    <FaLinkedinIn  className="h-16 w-16"/>
-                </Link>
-                <Link href={socials.instagram} className="h-16 w-16">
-                    <FaInstagram  className="h-16 w-16"/>
-                </Link>
-            </div>
-            <div className="flex gap-4">
-                <div className="shadow rounded-md p-2 shadow-blue-500 flex items-center justify-center w-48">
-                    <Link href="/contact">
-                        <p>Contact me</p>
-                    </Link>
+            
+            {/* Profession tags with staggered animation */}
+            <div 
+                className={`flex gap-4 flex-col md:flex-row transition-all duration-1000 delay-500 transform ${
+                    isVisible ? "translate-y-0 opacity-100" : "translate-y-20 opacity-0"
+                }`}
+            >
+                <div className="group">
+                    <p className="text-2xl md:text-4xl border-amber-700 border-2 rounded-sm p-3 font-bold transition-all duration-300 hover:bg-amber-700 hover:text-white hover:scale-105 hover:shadow-lg hover:shadow-amber-800/20 cursor-default" 
+                      style={{ background: "var(--background)", color: "var(--foreground)" }}>
+                        Data Scientist
+                    </p>
                 </div>
 
-                <div className="shadow rounded-md p-2 shadow-blue-500 flex items-center justify-center w-48">
-                    <a href="/docs/EricksonResume.pdf" target="_blank">
-                        <p>Resume</p>
-                    </a>
+                <div className="group">
+                    <p className="text-2xl md:text-4xl border-gray-700 border-2 rounded-sm p-3 font-bold transition-all duration-300 hover:bg-gray-700 hover:text-white hover:scale-105 hover:shadow-lg hover:shadow-gray-800/20 cursor-default" 
+                      style={{ background: "var(--background)", color: "var(--foreground)" }}>
+                        Web Developer
+                    </p>
                 </div>
             </div>
             
+            {/* Bio with fade-in animation */}
+            <div 
+                className={`max-w-2xl transition-all duration-1000 delay-700 ${
+                    isVisible ? "opacity-100" : "opacity-0"
+                }`}
+            >
+                <p className="text-xl md:text-2xl leading-relaxed" style={{ color: "var(--foreground)" }}>
+                    Data Scientist with expertise in machine learning and
+                    predictive analytics. Adept at leveraging advanced
+                    statistical techniques to solve complex business challenges.
+                </p>
+            </div>
+            
+            {/* Social icons with hover effects */}
+            <div 
+                className={`flex gap-6 transition-all duration-1000 delay-900 transform ${
+                    isVisible ? "translate-y-0 opacity-100" : "translate-y-20 opacity-0"
+                }`}
+            >
+                {Object.entries(socials).map(([platform, url], index) => (
+                    <Link 
+                        key={index}
+                        href={url}
+                        className={`transition-all duration-500 transform hover:scale-110 hover:-translate-y-2`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        {platform === 'github' && <FaGithub className="h-10 w-10 hover:text-amber-600" style={{ color: "var(--foreground)" }} />}
+                        {platform === 'kaggle' && <FaKaggle className="h-10 w-10 hover:text-amber-600" style={{ color: "var(--foreground)" }} />}
+                        {platform === 'linkedin' && <FaLinkedinIn className="h-10 w-10 hover:text-amber-600" style={{ color: "var(--foreground)" }} />}
+                        {platform === 'instagram' && <FaInstagram className="h-10 w-10 hover:text-amber-600" style={{ color: "var(--foreground)" }} />}
+                    </Link>
+                ))}
+            </div>
+            
+            {/* Action buttons with animated hover effects */}
+            <div 
+                className={`flex gap-6 transition-all duration-1000 delay-1000 transform ${
+                    isVisible ? "translate-y-0 opacity-100" : "translate-y-20 opacity-0"
+                }`}
+            >
+                <Link
+                    href="/contact"
+                    className="group relative overflow-hidden rounded-sm bg-amber-700 px-6 py-3 text-lg font-medium text-white shadow-md transition-all duration-300 hover:shadow-lg hover:shadow-amber-700/30"
+                >
+                    <span className="relative z-10 transition-all duration-500 group-hover:text-white">Contact me</span>
+                    <div className="absolute inset-0 z-0 bg-gradient-to-r from-amber-800 to-gray-700 opacity-0 transition-all duration-500 group-hover:opacity-100"></div>
+                </Link>
 
+                <a
+                    href="/docs/EricksonResume.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group relative overflow-hidden rounded-sm border-2 border-gray-700 px-6 py-3 text-lg font-medium shadow-md transition-all duration-300 hover:shadow-lg hover:shadow-gray-700/30"
+                    style={{ color: "var(--foreground)" }}
+                >
+                    <span className="relative z-10 transition-all duration-500 group-hover:text-white">View Resume</span>
+                    <div className="absolute inset-0 z-0 bg-gradient-to-r from-gray-700 to-gray-800 opacity-0 transition-all duration-500 group-hover:opacity-100"></div>
+                </a>
+            </div>
         </div>
     );
 }
